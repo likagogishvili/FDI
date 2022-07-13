@@ -1,16 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
   margin: 0;
 }
 
-p, div{
-  font-family: 'FiraGO';
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "FiraGO";
+}
+
+@font-face {
+  font-family: "FiraGO";
+  src: local("FiraGO"),
+    url("./assets/fonts/FiraGO-SemiBold.woff") format("truetype");
+}

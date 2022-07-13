@@ -1,0 +1,46 @@
+.portalHeading {
+  font-size: 1.8rem;
+}
+.headertyles {
+  background-color: #f5f6ff;
+  height: 100px;
+  z-index: 2;
+  vertical-align: "middle";
+  box-shadow: "0px 4px 10px 0px #0000001A";
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .portalHeading {
+    font-size: 1.2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .portalHeading {
+    font-size: 1.2rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .portalHeading {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .portalHeading {
+    font-size: 1.8rem;
+  }
+}
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) {
+  .portalHeading {
+    font-size: 0.8rem;
+  }
+  .headertyles {
+    min-height: 120px;
+  }
+}

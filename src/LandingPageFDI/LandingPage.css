@@ -1,0 +1,105 @@
+.LandingPageContainer {
+  height: 100%;
+  background-color: cadetblue;
+  background-image: radial-gradient(
+    68.52% 119.91% at 46.63% -26.57%,
+    #f4fbff 0%,
+    #e4f6ff 44.79%,
+    #dcf3ff 70.31%,
+    #b6e2ff 100%
+  );
+}
+.textOfContent{
+    color: #32297C;
+    text-align: "center";
+    font-size: 1.6rem;
+}
+.LandingPageContainer main {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* tab-switch styles */
+.tab-switch {
+  position: relative;
+}
+
+.tab-switch:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  top: 0;
+  transition: left cubic-bezier(0.88, -0.35, 0.565, 1.35) 0.4s;
+  border-radius: 27.5px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  background-color: #1457ff;
+  height: 100%;
+  z-index: 0;
+}
+
+.tab-switch.left:after {
+  left: 0;
+}
+
+.tab-switch.right:after {
+  left: 50%;
+}
+
+.tab-switch .tab {
+  display: inline-block;
+  width: 50%;
+  padding: 12px 0;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+  transition: color 200ms;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: normal;
+  user-select: none;
+}
+
+.tab-switch .tab.active {
+  color: #ffffff;
+}
+
+/* other styles */
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper {
+  border-radius: 37px;
+  border: 1px solid #1457ff;
+  width: 100%;
+  max-width: 316px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) {
+    .tab-switch .tab {
+        font-size: 0.5rem;
+      }
+      .textOfContent{
+        color: "#32297C";
+        text-align: "center";
+        font-size: 0.8rem;
+    }
+}

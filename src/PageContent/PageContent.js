@@ -1,5 +1,11 @@
 import HeaderFDI from "../HeaderFDI/HeaderFDI";
+import LandingPage from "../LandingPageFDI/LandingPage";
 function PageContent() {
-  return <HeaderFDI />;
+  return (
+    <div>
+      <HeaderFDI />
+      <LandingPage />
+    </div>
+  );
 }
 export default PageContent;
