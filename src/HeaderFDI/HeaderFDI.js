@@ -8,12 +8,9 @@ import linkedIn_icon from "../assets/img/headerIcons/linkedIn-icon.png";
 import translate_icon from "../assets/img/headerIcons/translate-icon.png";
 
 function HeaderFDI() {
-
   return (
     <div>
-      <div
-        className="shadow mb-1 rounded row justify-content-around headertyles "
-      >
+      <div className="shadow mb-1 rounded row justify-content-around headertyles ">
         <div className="col-sm-2 d-flex justify-content-center align-items-center">
           <img
             src={logoGeo}
@@ -23,10 +20,7 @@ function HeaderFDI() {
           />
         </div>
         <div className="col-sm-5 d-flex justify-content-center align-items-center">
-          <h3
-            style={{ color: "#32297C" }}
-            className="portalHeading"
-          >
+          <h3 style={{ color: "#32297C" }} className="portalHeading">
             პირდაპირი უცხოური ინვესტიციების პორტალი
           </h3>
         </div>

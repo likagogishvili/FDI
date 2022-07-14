@@ -32,3 +32,36 @@ html, body {
   src: local("FiraGO"),
     url("./assets/fonts/FiraGO-SemiBold.woff") format("truetype");
 }
+
+
+::selection {
+  background: #fcbd3e;
+}
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ed323d; /* color of the scroll thumb */
+}
+html,
+input,
+label,
+select,
+option {
+  cursor: url("assets/cursors/cursor.cur"), auto !important;
+}
+a,
+button,
+path,
+svg,
+rect,
+tspan {
+  cursor: url("assets/cursors/cursorPointer.cur"), auto !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}

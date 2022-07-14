@@ -15,24 +15,63 @@ import jandacva from "../assets/img/landingPage/iconsForSectors/jandacva.svg";
 import safinanso from "../assets/img/landingPage/iconsForSectors/safinanso.svg";
 import danarcheni from "../assets/img/landingPage/iconsForSectors/danarcheni.svg";
 
-
-
 const sectionNames = [
-    'სოფლის მეურნეობა, თევზჭერა',
-    'სამთომოპოვებითი მრეწველობა',
-    'დამამუშავებელი მრეწველობა',
-    'ენერგეტიკა',
-    'მშენებლობა',
-    'სასტუმროები და რესტორნები',
-    'ტრანსპორტი',
-    'კავშირგაბმულობა',
-    'განათლება',
-    'ჯანდაცვა და სოციალური დახმარება',
-    'უძრავი ქონება',
-    'საფინანსო სექტორი',
-    'დანარჩენი სექტორები'
-]
+  "სოფლის მეურნეობა, თევზჭერა",
+  "სამთომოპოვებითი მრეწველობა",
+  "დამამუშავებელი მრეწველობა",
+  "ენერგეტიკა",
+  "მშენებლობა",
+  "სასტუმროები და რესტორნები",
+  "ტრანსპორტი",
+  "კავშირგაბმულობა",
+  "განათლება",
+  "ჯანდაცვა და სოციალური დახმარება",
+  "უძრავი ქონება",
+  "საფინანსო სექტორი",
+  "დანარჩენი სექტორები",
+];
+
+const cuntries = [
+  "ამერიკის შეერთებული შტატები",
+  "ჩინეთი",
+  "თურქეთი",
+  "საფრანგეთი",
+  "უკრაინა",
+  "აზერბაიჯანი",
+  "სომხეთი",
+  "რუსეთი",
+  "იტალია",
+  "უზბეკეთი",
+  "ავსტრია",
+  "ბელგია",
+  "ბულგარეთი",
+  "ხორვატია",
+  "კვიპროსი",
+  "ესტონეთი",
+  "საბერძნეთი",
+  "ლუქსემბურგი",
+  "ყირგიზეთი",
+  "თურქმენეთი",
+];
+
 function SelectWorldOrSector(props) {
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      height: 72,
+      minHeight: 72,
+      backgroundImage: `url(${
+        props.tabswitch === "სექტორების" ? sectorIcon : countryIcon
+      })`,
+      backgroundRepeat: "no-repeat",
+      width: "100%",
+      backgroundPosition: "right 6% top 50%",
+      paddingLeft: "6%",
+      color: "#808083",
+      borderRadius: "10px",
+      border: "none",
+    }),
+  };
   const optionsSector = [
     {
       value: sectionNames[0],
@@ -53,7 +92,7 @@ function SelectWorldOrSector(props) {
       ),
     },
     {
-      value:sectionNames[2],
+      value: sectionNames[2],
       label: (
         <div className="selectiondiv">
           <img src={damamushavebeli} alt="" className="SeqtorebisIcons" />
@@ -152,23 +191,188 @@ function SelectWorldOrSector(props) {
       ),
     },
   ];
-  const customStyles = {
-    control: (base) => ({
-      ...base,
-      height: 72,
-      minHeight: 72,
-      backgroundImage: `url(${
-        props.tabswitch === "სექტორების" ? sectorIcon : countryIcon
-      })`,
-      backgroundRepeat: "no-repeat",
-      width: "100%",
-      backgroundPosition: "right 6% top 50%",
-      paddingLeft: "6%",
-      color: "#808083",
-      borderRadius: "10px",
-      border: "none",
-    }),
-  };
+  const optionCountry = [
+    {
+      value: cuntries[0],
+      label: (
+        <div className="selectiondiv">
+          <img src={soflis_meurneoba} alt="" className="SeqtorebisIcons" />
+          {cuntries[0]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[1],
+      label: (
+        <div className="selectiondiv">
+          <img src={samtomopovebiti} alt="" className="SeqtorebisIcons" />
+          {cuntries[1]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[2],
+      label: (
+        <div className="selectiondiv">
+          <img src={damamushavebeli} alt="" className="SeqtorebisIcons" />
+          {cuntries[2]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[3],
+      label: (
+        <div className="selectiondiv">
+          <img src={energetika} alt="" className="SeqtorebisIcons" />
+          {cuntries[3]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[4],
+      label: (
+        <div className="selectiondiv">
+          <img src={mshenebloba} alt="" className="SeqtorebisIcons" />
+          {cuntries[4]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[5],
+      label: (
+        <div className="selectiondiv">
+          <img src={sastumroebi} alt="" className="SeqtorebisIcons" />
+          {cuntries[5]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[6],
+      label: (
+        <div className="selectiondiv">
+          <img src={transporti} alt="" className="SeqtorebisIcons" />
+          {cuntries[6]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[7],
+      label: (
+        <div className="selectiondiv">
+          <img src={kavshirgabmuloba} alt="" className="SeqtorebisIcons" />
+          {cuntries[7]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[8],
+      label: (
+        <div className="selectiondiv">
+          <img src={ganatleba} alt="" className="SeqtorebisIcons" />
+          {cuntries[8]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[9],
+      label: (
+        <div className="selectiondiv">
+          <img src={jandacva} alt="" className="SeqtorebisIcons" />
+          {cuntries[9]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[10],
+      label: (
+        <div className="selectiondiv">
+          <img src={jandacva} alt="" className="SeqtorebisIcons" />
+          {cuntries[10]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[11],
+      label: (
+        <div className="selectiondiv">
+          <img src={safinanso} alt="" className="SeqtorebisIcons" />
+          {cuntries[11]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[12],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[12]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[13],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[13]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[14],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[14]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[15],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[15]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[16],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[16]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[17],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[17]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[18],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[18]}
+        </div>
+      ),
+    },
+    {
+      value: cuntries[19],
+      label: (
+        <div className="selectiondiv">
+          <img src={danarcheni} alt="" className="SeqtorebisIcons" />
+          {cuntries[19]}
+        </div>
+      ),
+    },
+  ];
 
   return props.tabswitch === "სექტორების" ? (
     <Select
@@ -194,7 +398,7 @@ function SelectWorldOrSector(props) {
       }}
       styles={customStyles}
       className="chooseCountrySelect"
-      options={optionsSector}
+      options={optionCountry}
     />
   );
 }

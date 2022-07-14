@@ -59,7 +59,7 @@ function LandingPage() {
       </main>
       <div className="spinner">
         <div className="row d-flex align-items-center justify-content-center">
-          <div className="text-center col-lg-3 col-sm-12  ">
+          <div className="text-center col-lg-3 col-sm-5 ">
             <div className="chooseDate">
               <select
                 name="years"
@@ -119,16 +119,36 @@ function LandingPage() {
               </select>
             </div>
           </div>
-          <div className=" text-center col-lg-5 col-sm-12 ">
+          <div className=" text-center col-lg-5 col-sm-12 pt-5 pb-2">
             <div>
               <img src={backgroundOfCircle} alt="" />
             </div>
           </div>
-          <div className="text-center col-lg-3 col-sm-12">
+          <div className="text-center col-lg-3 col-sm-5">
             <div className="chooseCountry">
               <SelectWorldOrSector tabswitch={tabswitch} />
             </div>
           </div>
+        </div>
+      </div>
+      <hr
+        style={{ width: "50%", margin: "auto" }}
+        color="black"
+        className="line"
+      />
+      <div class="row justify-content-md-center mt-4">
+        <div class="col-lg-3 mt-3 mb-3 d-flex flex-row justify-content-around align-items-center colorOfText">
+          პირდაპირი უცხოური <br /> ინვესტიციები 2020 წელს
+        </div>
+        <div class="col-lg-1 mt-3 mb-3 d-flex flex-row justify-content-around align-items-center colorOfText border border-primary rounded ">
+          572 მლნ $
+        </div>
+        <div class="col-lg-3 mt-3 mb-3 d-flex flex-row justify-content-around align-items-center colorOfText">
+          ცვლილება წინა <br />
+          წელთან შედარებით: -51.5%
+        </div>
+        <div class="col-lg-1 mt-3 mb-3 d-flex flex-row justify-content-around align-items-center">
+          <button className="sheadare">შეადარე </button>
         </div>
       </div>
     </div>
