@@ -1,17 +1,17 @@
-.portalHeading {
-  font-size: 1.8rem;
-}
 .headertyles {
   background-color: #f5f6ff;
   height: 100px;
-  z-index: 2;
-  vertical-align: "middle";
-  box-shadow: "0px 4px 10px 0px #0000001A";
+}
+.portalHeading {
+  font-size: 1.5rem;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .portalHeading {
     font-size: 1.2rem;
+  }
+  .headerLogo {
+    width: 100% !important;
   }
 }
 
@@ -20,6 +20,9 @@
   .portalHeading {
     font-size: 1.2rem;
   }
+  .headerLogo {
+    width: 100%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -27,12 +30,18 @@
   .portalHeading {
     font-size: 1.2rem;
   }
+  .headerLogo {
+    width: 100%;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .portalHeading {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+  .headerLogo {
+    width: 100%;
   }
 }
 /* Set width to make card deck cards 100% width */
@@ -42,5 +51,9 @@
   }
   .headertyles {
     min-height: 120px;
+  }
+
+  .headerLogo {
+    width: 55%;
   }
 }

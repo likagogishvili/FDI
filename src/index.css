@@ -21,8 +21,12 @@ h4,
 h5,
 h6 {
   font-family: "FiraGO";
+  font-feature-settings: "case" on;
 }
-
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 @font-face {
   font-family: "FiraGO";
   src: local("FiraGO"),

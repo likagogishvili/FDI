@@ -10,14 +10,14 @@ import translate_icon from "../assets/img/headerIcons/translate-icon.png";
 function HeaderFDI() {
 
   return (
-    <div >
+    <div>
       <div
-        className="row justify-content-around headertyles; headertyles"
+        className="shadow mb-1 rounded row justify-content-around headertyles "
       >
         <div className="col-sm-2 d-flex justify-content-center align-items-center">
           <img
             src={logoGeo}
-            className="img-thumbnail"
+            className="headerLogo"
             alt="..."
             style={{ backgroundColor: "#F5F6FF", border: "none" }}
           />
