@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./LandingPage.css";
 import dateIcon from "../assets/img/landingPage/dateIcon.png";
-import countryIcon from "../assets/img/landingPage/countryIcon.png";
+
 import backgroundOfCircle from "../assets/img/landingPage/backgroundOfCircle.png";
+import SelectWorldOrSector from "./SelectWorldOrSector";
 
 function LandingPage() {
   const [tabswitch, setTabSwitch] = useState("სექტორების");
@@ -16,7 +17,6 @@ function LandingPage() {
       setTabSwitch("სექტორების");
     }
   }
-  console.log(tabswitch);
 
   return (
     <div className="LandingPageContainer">
@@ -119,39 +119,14 @@ function LandingPage() {
               </select>
             </div>
           </div>
-          <div className=" text-center col-lg-4 col-sm-12 ">
+          <div className=" text-center col-lg-5 col-sm-12 ">
             <div>
-            <img src={backgroundOfCircle} />
+              <img src={backgroundOfCircle} alt="" />
             </div>
           </div>
           <div className="text-center col-lg-3 col-sm-12">
             <div className="chooseCountry">
-              <select
-                name="years"
-                id="years"
-                style={{
-                  backgroundImage: `url(${countryIcon})`,
-                  backgroundRepeat: "no-repeat",
-                  width: "100%",
-                  backgroundPosition: "right 6% top 50%",
-                }}
-              >
-                <option value="2021">აირჩიეთ სასურველი ქვეყანა</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-                <option value="2014">2014</option>
-                <option value="2013">2013</option>
-                <option value="2012">2012</option>
-                <option value="2011">2011</option>
-                <option value="2010">2010</option>
-                <option value="2009">2009</option>
-                <option value="2008">2008</option>
-                <option value="2007">2007</option>
-              </select>
+              <SelectWorldOrSector tabswitch={tabswitch} />
             </div>
           </div>
         </div>
