@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./LandingPage.css";
 import dateIcon from "../assets/img/landingPage/dateIcon.png";
 import countryIcon from "../assets/img/landingPage/countryIcon.png";
+import backgroundOfCircle from "../assets/img/landingPage/backgroundOfCircle.png";
 
 function LandingPage() {
   const [tabswitch, setTabSwitch] = useState("სექტორების");
@@ -119,7 +120,9 @@ function LandingPage() {
             </div>
           </div>
           <div className=" text-center col-lg-4 col-sm-12 ">
-            One of three columns
+            <div>
+            <img src={backgroundOfCircle} />
+            </div>
           </div>
           <div className="text-center col-lg-3 col-sm-12">
             <div className="chooseCountry">
