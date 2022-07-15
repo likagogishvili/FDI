@@ -14,7 +14,6 @@ import ganatleba from "../assets/img/landingPage/iconsForSectors/ganatleba.svg";
 import jandacva from "../assets/img/landingPage/iconsForSectors/jandacva.svg";
 import safinanso from "../assets/img/landingPage/iconsForSectors/safinanso.svg";
 import danarcheni from "../assets/img/landingPage/iconsForSectors/danarcheni.svg";
-
 const sectionNames = [
   "სოფლის მეურნეობა, თევზჭერა",
   "სამთომოპოვებითი მრეწველობა",
@@ -64,7 +63,7 @@ function SelectWorldOrSector(props) {
         props.tabswitch === "სექტორების" ? sectorIcon : countryIcon
       })`,
       backgroundRepeat: "no-repeat",
-      width: "100%",
+      width: "90%",
       backgroundPosition: "right 6% top 50%",
       paddingLeft: "6%",
       color: "#808083",
@@ -374,6 +373,10 @@ function SelectWorldOrSector(props) {
     },
   ];
 
+  function Selected(e){
+    console.log(e)
+  }
+
   return props.tabswitch === "სექტორების" ? (
     <Select
       name="sector"
@@ -386,6 +389,7 @@ function SelectWorldOrSector(props) {
       styles={customStyles}
       className="chooseCountrySelect"
       options={optionsSector}
+      onChange={(e)=>Selected(e)}
     />
   ) : (
     <Select
@@ -399,6 +403,8 @@ function SelectWorldOrSector(props) {
       styles={customStyles}
       className="chooseCountrySelect"
       options={optionCountry}
+      onChange={(e)=>Selected(e)}
+
     />
   );
 }

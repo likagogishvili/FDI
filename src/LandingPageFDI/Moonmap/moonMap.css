@@ -1,0 +1,84 @@
+.center-title {
+  font-size: 30px;
+}
+
+.center-title.small {
+  font-size: 13px;
+}
+
+.orbit-center {
+  position: relative;
+  width: 224px !important;
+  height: 220px !important;
+  text-align: center;
+  padding-top: 77px;
+  padding-left: 23px;
+}
+
+.moon {
+  border-radius: 50%;
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+  line-height: 43px;
+  border: 1px solid #ccc;
+  font-size: 0px;
+  transition: 0.3s background, 0s color;
+  z-index: 1;
+}
+
+.moon:hover {
+  cursor: pointer;
+}
+
+.moon.active {
+  background: #2ecc71;
+  color: #fff;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.center-title {
+  font-size: 30px;
+}
+
+center .moon {
+  width: 63.32px !important;
+  height: 63.32px !important;
+}
+
+.moon.active {
+  background: #2ecc71;
+  color: #fff;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.moonmap {
+  width: 72px !important;
+  height: 70px !important;
+}
+
+.center-title {
+  font-size: 30px;
+}
+
+center .moon {
+  width: 63.32px !important;
+  height: 63.32px !important;
+}
+
+.moon.active {
+  background: #2ecc71;
+  color: #fff;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.moonmap {
+  width: 72px !important;
+  height: 70px !important;
+}
