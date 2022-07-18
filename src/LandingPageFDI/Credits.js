@@ -2,8 +2,8 @@ function Credits(){
 
     return(
         <div className="creditsdiv">
-        <p>© 2021 | ყველა უფლება დაცულია</p>
-        <p>სტატისტიკის ეროვნული სამსახური</p>
+        <p style={{fontSize:'10px'}}>© 2021 | ყველა უფლება დაცულია</p>
+        <p style={{fontSize:'12px'}}>სტატისტიკის ეროვნული სამსახური</p>
         
       </div>
     )
