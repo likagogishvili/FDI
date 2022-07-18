@@ -23,7 +23,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-var MoonMap = function (querySelector, options) {
+
+// eslint-disable-next-line
+let MoonMap = function (querySelector, options) {
   // keep track of the moons we've added
   this.moons = [];
 
@@ -109,8 +111,6 @@ var MoonMap = function (querySelector, options) {
       moon.style.top = (y + totalOffset).toString() + "px";
       moon.style.left = (x + totalOffset).toString() + "px";
       moon.style.visibility = "visible";
-      moon.style.width = "63px";
-      moon.style.height = "63px";
 
       if (this.options.removeOriginal)
         moons[i].parentNode.removeChild(moons[i]);
@@ -121,13 +121,20 @@ var MoonMap = function (querySelector, options) {
     }
   } else {
     // moons are NOT defined in the DOM, and are added programmatically
+    // eslint-disable-next-line
     var n = this.options.n,
+      // eslint-disable-next-line
       div = 360 / n,
+      // eslint-disable-next-line
       angle = 360 - this.options.startAngle;
+      // eslint-disable-next-line
 
-    for (var i = 1; i <= this.options.n; ++i) {
+    for (let i = 1; i <= this.options.n; ++i) {
+      // eslint-disable-next-line
       var moon = document.createElement("div"),
+        // eslint-disable-next-line
         y = Math.sin(angle * (Math.PI / 180)) * this.options.radius,
+        // eslint-disable-next-line
         x = Math.cos(angle * (Math.PI / 180)) * this.options.radius;
 
       moon.className = this.options.moonClass;
@@ -142,8 +149,9 @@ var MoonMap = function (querySelector, options) {
       }
 
       element.appendChild(moon);
-
+      // eslint-disable-next-line
       var offsetToChildCenter = moon.offsetWidth / 2,
+        // eslint-disable-next-line
         totalOffset = offsetToParentCenter - offsetToChildCenter;
 
       moon.style.top = (y + totalOffset).toString() + "px";
@@ -159,7 +167,7 @@ var MoonMap = function (querySelector, options) {
   this.moonEvent = function (event, fn) {
     var map = this;
 
-    for (var i = 0; i < this.moons.length; i++) {
+    for (let i = 0; i < this.moons.length; i++) {
       this.moons[i].addEventListener(event, function () {
         fn(this, map);
       });
@@ -173,11 +181,12 @@ var MoonMap = function (querySelector, options) {
 
     var seconds = ms / 1000,
       prefixes = ["-webkit-", "-moz-", "-o-", "-ms-", ""],
+      // eslint-disable-next-line
       newPosition = this.lastRotation + degrees;
 
     this.lastRotation = degrees;
 
-    for (var k = 0; k < prefixes.length; k++) {
+    for (let k = 0; k < prefixes.length; k++) {
       var prefix = prefixes[k];
 
       this.map.style[prefix + "transition"] =
@@ -199,7 +208,7 @@ var MoonMap = function (querySelector, options) {
   };
 
   this.previous = function () {
-    let prevActive = this.currentlyActive - 1;
+    var prevActive = this.currentlyActive - 1;
 
     if (typeof this.moons[prevActive] == "undefined")
       prevActive = this.moons.length - 1;
@@ -232,3 +241,4 @@ var MoonMap = function (querySelector, options) {
     }, speed);
   };
 };
+export default MoonMap

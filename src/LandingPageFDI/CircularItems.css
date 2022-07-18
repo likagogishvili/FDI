@@ -1,9 +1,7 @@
 .cirleOfElements{
     height: 474px;
+    width: 450px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 474px;
+    width: 100%;
   }
-
-
-  

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Select from "react-select";
 import dateIcon from "../assets/img/landingPage/dateIcon.png";
 import "./LandingPage.css";
-import {counterActions} from '../store/index'
+import { counterActions } from "../store/index";
 import { useDispatch } from "react-redux";
 
 function SelectedYear() {
@@ -88,11 +88,11 @@ function SelectedYear() {
     },
     {
       value: years[13],
-      label: <div className="dateOptions">{years[12]}</div>,
+      label: <div className="dateOptions">{years[13]}</div>,
     },
     {
       value: years[14],
-      label: <div className="dateOptions">{years[12]}</div>,
+      label: <div className="dateOptions">{years[14]}</div>,
     },
   ];
   return (
