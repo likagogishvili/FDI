@@ -5,6 +5,7 @@ import SelectWorldOrSector from "./SelectWorldOrSector";
 import CircularItems from "./CircularItems";
 import FooterLandingPage from "./FooterLandingPage";
 import SelectedYear from "./SelectedYear";
+import Credits from "./Credits";
 
 function LandingPage() {
   const [tabswitch, setTabSwitch] = useState("სექტორების");
@@ -76,11 +77,12 @@ function LandingPage() {
         </div>
       </div>
       <hr
-        style={{ width: "50%", margin: "auto" }}
+        style={{ width: "50%", margin: "auto"}}
         color="black"
         className="line"
       />
       <FooterLandingPage />
+      <Credits/>
     </div>
   );
 }
