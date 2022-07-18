@@ -66,7 +66,7 @@ function LandingPage() {
               <SelectedYear />
             </div>
           </div>
-          <div className=" text-center col-lg-5 col-sm-12 pt-5 pb-2 d-flex justify-content-center align-items-center">
+          <div className=" text-center col-lg-5 col-sm-12 pt-5 d-flex justify-content-center align-items-center">
             <CircularItems />
           </div>
           <div className="text-center col-lg-3 col-sm-5">

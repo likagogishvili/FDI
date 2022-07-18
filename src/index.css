@@ -50,9 +50,12 @@ html,
 input,
 label,
 select,
+div,
+p,
 option {
   cursor: url("assets/cursors/cursor.cur"), auto !important;
 }
+
 a,
 button,
 path,

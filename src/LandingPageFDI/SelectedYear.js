@@ -1,10 +1,19 @@
+import { useState, useEffect } from "react";
 import Select from "react-select";
 import dateIcon from "../assets/img/landingPage/dateIcon.png";
 import "./LandingPage.css";
+import {counterActions} from '../store/index'
+import { useDispatch } from "react-redux";
+
 function SelectedYear() {
-  function Selected(e) {
-    console.log(e);
-  }
+  const [year, Setyear] = useState(0);
+
+  //adding year in redux
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(counterActions.addYear(year));
+  }, [year, dispatch]);
 
   const years = [
     2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010,
@@ -21,6 +30,7 @@ function SelectedYear() {
       backgroundRepeat: "no-repeat",
       width: "50%",
       backgroundPosition: "right 6% top 50%",
+      textAlign: "left",
     }),
   };
   const optionsSector = [
@@ -93,8 +103,11 @@ function SelectedYear() {
       className="chooseCountrySelect"
       options={optionsSector}
       styles={customStyles}
-      components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }}
-      onChange={(e) => Selected(e)}
+      components={{
+        DropdownIndicator: () => null,
+        IndicatorSeparator: () => null,
+      }}
+      onChange={(e) => Setyear(e.value)}
     />
   );
 }

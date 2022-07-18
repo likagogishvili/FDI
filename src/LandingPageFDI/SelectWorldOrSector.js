@@ -14,46 +14,51 @@ import ganatleba from "../assets/img/landingPage/iconsForSectors/ganatleba.svg";
 import jandacva from "../assets/img/landingPage/iconsForSectors/jandacva.svg";
 import safinanso from "../assets/img/landingPage/iconsForSectors/safinanso.svg";
 import danarcheni from "../assets/img/landingPage/iconsForSectors/danarcheni.svg";
-const sectionNames = [
-  "სოფლის მეურნეობა, თევზჭერა",
-  "სამთომოპოვებითი მრეწველობა",
-  "დამამუშავებელი მრეწველობა",
-  "ენერგეტიკა",
-  "მშენებლობა",
-  "სასტუმროები და რესტორნები",
-  "ტრანსპორტი",
-  "კავშირგაბმულობა",
-  "განათლება",
-  "ჯანდაცვა და სოციალური დახმარება",
-  "უძრავი ქონება",
-  "საფინანსო სექტორი",
-  "დანარჩენი სექტორები",
-];
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
-const cuntries = [
-  "ამერიკის შეერთებული შტატები",
-  "ჩინეთი",
-  "თურქეთი",
-  "საფრანგეთი",
-  "უკრაინა",
-  "აზერბაიჯანი",
-  "სომხეთი",
-  "რუსეთი",
-  "იტალია",
-  "უზბეკეთი",
-  "ავსტრია",
-  "ბელგია",
-  "ბულგარეთი",
-  "ხორვატია",
-  "კვიპროსი",
-  "ესტონეთი",
-  "საბერძნეთი",
-  "ლუქსემბურგი",
-  "ყირგიზეთი",
-  "თურქმენეთი",
-];
+import {counterActions} from '../store/index'
 
 function SelectWorldOrSector(props) {
+  const sectionNames = [
+    "სოფლის მეურნეობა, თევზჭერა",
+    "სამთომოპოვებითი მრეწველობა",
+    "დამამუშავებელი მრეწველობა",
+    "ენერგეტიკა",
+    "მშენებლობა",
+    "სასტუმროები და რესტორნები",
+    "ტრანსპორტი",
+    "კავშირგაბმულობა",
+    "განათლება",
+    "ჯანდაცვა და სოციალური დახმარება",
+    "უძრავი ქონება",
+    "საფინანსო სექტორი",
+    "დანარჩენი სექტორები",
+  ];
+
+  const cuntries = [
+    "ამერიკის შეერთებული შტატები",
+    "ჩინეთი",
+    "თურქეთი",
+    "საფრანგეთი",
+    "უკრაინა",
+    "აზერბაიჯანი",
+    "სომხეთი",
+    "რუსეთი",
+    "იტალია",
+    "უზბეკეთი",
+    "ავსტრია",
+    "ბელგია",
+    "ბულგარეთი",
+    "ხორვატია",
+    "კვიპროსი",
+    "ესტონეთი",
+    "საბერძნეთი",
+    "ლუქსემბურგი",
+    "ყირგიზეთი",
+    "თურქმენეთი",
+  ];
+
   const customStyles = {
     control: (base) => ({
       ...base,
@@ -69,6 +74,7 @@ function SelectWorldOrSector(props) {
       color: "#808083",
       borderRadius: "10px",
       border: "none",
+      textAlign: "left",
     }),
   };
   const optionsSector = [
@@ -373,9 +379,14 @@ function SelectWorldOrSector(props) {
     },
   ];
 
-  function Selected(e){
-    console.log(e)
-  }
+  const [sectionCountry, SetSecCou] = useState(1);
+
+  //adding sectionOrCountry in redux
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(counterActions.addcountryOrSectore(sectionCountry));
+  }, [sectionCountry, dispatch]);
 
   return props.tabswitch === "სექტორების" ? (
     <Select
@@ -389,7 +400,7 @@ function SelectWorldOrSector(props) {
       styles={customStyles}
       className="chooseCountrySelect"
       options={optionsSector}
-      onChange={(e)=>Selected(e)}
+      onChange={(e) => SetSecCou(e.value)}
     />
   ) : (
     <Select
@@ -403,8 +414,7 @@ function SelectWorldOrSector(props) {
       styles={customStyles}
       className="chooseCountrySelect"
       options={optionCountry}
-      onChange={(e)=>Selected(e)}
-
+      onChange={(e) => SetSecCou(e.value)}
     />
   );
 }

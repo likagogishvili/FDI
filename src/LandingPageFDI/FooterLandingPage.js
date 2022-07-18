@@ -1,10 +1,13 @@
 import greenArrow from "../assets/img/landingPage/arrows/greenArrow.png";
+import { useSelector } from "react-redux";
+
 function FooterLandingPage() {
+  const year = useSelector((state) => state.newYear);
   return (
     <footer>
       <div className="row justify-content-md-center">
         <div className="col-lg-3 mt-3 mb-3 d-flex flex-row justify-content-around align-items-center colorOfText pt-2 pb-2">
-          პირდაპირი უცხოური <br /> ინვესტიციები 2020 წელს
+          პირდაპირი უცხოური <br /> ინვესტიციები {year === 0 ? 2021 : year} წელს
         </div>
         <div
           className="col-lg-1 mt-3 mb-3 p-1 d-flex flex-row justify-content-around align-items-center colorOfText border border-primary rounded mln"
