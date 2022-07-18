@@ -23,7 +23,8 @@ h6 {
   font-family: "FiraGO";
   font-feature-settings: "case" on;
 }
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -32,7 +33,6 @@ html, body {
   src: local("FiraGO"),
     url("./assets/fonts/FiraGO-SemiBold.woff") format("truetype");
 }
-
 
 ::selection {
   background: #fcbd3e;
