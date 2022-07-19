@@ -1,5 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
-const initialState = { newYear: 0, sectorOrCountry: "" };
+const initialState = { newYear: 0, sectorOrCountry: "",tabswitch:'სექტორების' };
 
 const counterSlice = createSlice({
   name: "addingData",
@@ -10,6 +10,9 @@ const counterSlice = createSlice({
     },
     addcountryOrSectore(state, action) {
       state.sectorOrCountry = action.payload;
+    },
+    Settabswitch(state, action) {
+      state.tabswitch = action.payload;
     },
   },
 });

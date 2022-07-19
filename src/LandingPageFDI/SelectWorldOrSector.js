@@ -16,8 +16,7 @@ import safinanso from "../assets/img/landingPage/iconsForSectors/safinanso.svg";
 import danarcheni from "../assets/img/landingPage/iconsForSectors/danarcheni.svg";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-
-import {counterActions} from '../store/index'
+import { counterActions } from "../store/index";
 
 function SelectWorldOrSector(props) {
   const sectionNames = [

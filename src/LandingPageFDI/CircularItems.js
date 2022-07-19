@@ -15,7 +15,7 @@ import jandacva from "../assets/img/IconsForCircle/10.svg";
 import udzraviQoneba from "../assets/img/IconsForCircle/11.svg";
 import finansebi from "../assets/img/IconsForCircle/12.svg";
 import sxva from "../assets/img/IconsForCircle/13.svg";
-
+import { useSelector } from "react-redux/es/exports";
 function CircularItems() {
   const [itemHovered, setItemHovered] = useState();
   const ref = useRef(null);
@@ -25,19 +25,20 @@ function CircularItems() {
       moonSelector: ".moonSelector",
       radius: 183,
     });
-    let test = document.getElementById("parent");
-    test.addEventListener(
-      "mouseover",
-      function (event) {
-        setItemHovered(event.target.value);
-        console.log(event.target.value)
-      },
-      false
-    );
+    // let test = document.getElementById("parent");
+
+    // document.onmouseover = function (e) {
+    //   setItemHovered(e.target.id);
+    // };
   }, []);
 
-  console.log(itemHovered);
+  const tabswitch = useSelector((state) => state.tabswitch);
+  if(tabswitch === "სექტორების"){
+    var imarray=[soflisMeurneoba, mainingi,damamushavebeli,eqsporti ]
+  }else{
+    imarray=[eqsporti, mainingi,damamushavebeli,eqsporti ]
 
+  }
   return (
     <div
       className=" col-sm-12 cirleOfElements"
@@ -54,43 +55,43 @@ function CircularItems() {
       >
         <span className="centerCircle">dsadsa</span>
       </div>
-      <span className="moonSelector" value="item1">
-        <img src={soflisMeurneoba} alt="" className="imgOnHover" />
+      <span className="moonSelector" >
+        <img src={imarray[0]} alt="" className="imgOnHover" id="item1" />
       </span>
       <span className="moonSelector" id="item2">
         <img src={mainingi} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item3">
         <img src={damamushavebeli} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item4">
         <img src={eqsporti} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item5">
         <img src={mshenebloba} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item6">
         <img src={sastumroebi} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item7">
         <img src={transporti} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item8">
         <img src={kavshirgabmuloba} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item9">
         <img src={ganatleba} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item10">
         <img src={jandacva} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item11">
         <img src={udzraviQoneba} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item12">
         <img src={finansebi} alt="" />
       </span>
-      <span className="moonSelector">
+      <span className="moonSelector" id="item13">
         <img src={sxva} alt="" />
       </span>
     </div>

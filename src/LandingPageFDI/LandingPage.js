@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./LandingPage.css";
 
 import SelectWorldOrSector from "./SelectWorldOrSector";
@@ -6,6 +6,8 @@ import CircularItems from "./CircularItems";
 import FooterLandingPage from "./FooterLandingPage";
 import SelectedYear from "./SelectedYear";
 import Credits from "./Credits";
+import { useDispatch } from "react-redux";
+import { counterActions } from "../store/index";
 
 function LandingPage() {
   const [tabswitch, setTabSwitch] = useState("სექტორების");
@@ -19,6 +21,12 @@ function LandingPage() {
       setTabSwitch("სექტორების");
     }
   }
+  //adding which one is selected in redux
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(counterActions.Settabswitch(tabswitch));
+  }, [tabswitch, dispatch]);
 
   return (
     <div className="LandingPageContainer">
@@ -77,12 +85,12 @@ function LandingPage() {
         </div>
       </div>
       <hr
-        style={{ width: "50%", margin: "auto"}}
+        style={{ width: "50%", margin: "auto" }}
         color="black"
         className="line"
       />
       <FooterLandingPage />
-      <Credits/>
+      <Credits />
     </div>
   );
 }
